@@ -118,7 +118,22 @@ app.controller('HomeController', ['$scope', function($scope) {
 
 	};
 
+	$scope.posterClick= function(index){
+		$scope.movies[index].posterindex ++;
 
+
+		if($scope.movies[index].posterindex == $scope.movies[index].posters.length){
+
+			$scope.movies[index].posterindex= 0;
+		}
+
+	};
+
+
+	$scope.timeText= function(minutes){
+		$scope.movies.runtime= $filter(minutes)(date: 'shortTime');
+
+	};
 
 
 
