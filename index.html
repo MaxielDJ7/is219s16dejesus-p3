@@ -45,7 +45,7 @@
           <div class="thumbnail">
 
 					<img class="poster" ng-click="posterClick($index)" ng-src="{{movies[$index].posters[movie.posterindex]}}" />
-					<div class="imageInfo">{{movies[$index].posterindex}}
+					<div class="imageInfo"> Poster {{movies[$index].posterindex}} of {{movies[$index].posters.length}}
 					</div>
 
 					<p class="title">{{movies[$index].title}} ({{movies[$index].country}})</p>
