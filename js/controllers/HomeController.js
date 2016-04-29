@@ -88,7 +88,49 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
-	}
+	},
+	{
+		title:	'Ant-Man',
+		iscore:	7.4,
+		rating:	'PG-13',
+		runtime:	117,
+		released:	new Date('2015', '07', '17'),
+		country:	'USA',
+		posters:	['img/antman1.png','img/antman2.png'],
+		imdb:		'http://www.imdb.com/title/tt0478970/?ref_=fn_al_tt_1',
+		website:	'http://marvel.com/antman#/antview',
+		likes:	1000,
+		dislikes:	127,
+		posterindex: 0
+},
+{
+	title:	'City of God',
+	iscore:	8.7,
+	rating:	'R',
+	runtime:	130,
+	released:	new Date('2003', '02', '13'),
+	country:	'USA',
+	posters:	['img/cog1.png','img/cog2.png'],
+	imdb:		'http://www.imdb.com/title/tt0317248/?ref_=nv_sr_1',
+	website:	'http://www.miramax.com/movie/city-of-god/',
+	likes:	250,
+	dislikes:	17,
+	posterindex: 0
+},
+{
+	title:	'Lilo and Stitch',
+	iscore:	7.2,
+	rating:	'PG',
+	runtime:	145,
+	released:	new Date('2002', '06', '21'),
+	country:	'USA',
+	posters:	['img/ls1.png','img/ls2.png'],
+	imdb:		'http://www.imdb.com/title/tt0275847/',
+	website:	'http://movies.disney.com/lilo-stitch',
+	likes:	300,
+	dislikes:	25,
+	posterindex: 0
+}
 
 
   ];
@@ -130,8 +172,10 @@ app.controller('HomeController', ['$scope', function($scope) {
 	};
 
 
+
 	$scope.timeText= function(minutes){
-		$scope.movies.runtime= $filter(minutes)(date: 'shortTime');
+		$scope.time= $filter(minutes)('h : mm a');
+
 
 	};
 
