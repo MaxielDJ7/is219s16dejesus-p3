@@ -141,8 +141,9 @@ app.controller('HomeController', ['$scope', function($scope) {
 	/* ADD VARIABLES FOR STEP 3 HERE */
 
 
-	$scope.title= "IMDB " + $scope.owner + "'s Top 8 Movies";
+
 	$scope.owner= "Maxie";
+	$scope.title= "IMDB + "+ $scope.owner+ "\'s Top 8 Movies";
 	$scope.github= "https://github.com/MaxielDJ7/is219s16dejesus-p3";
 
 
@@ -173,11 +174,15 @@ app.controller('HomeController', ['$scope', function($scope) {
 
 
 
-	$scope.timeText= function(minutes){
-		$scope.time= $filter(minutes)('h : mm a');
+		$scope.timeText= function(minutes){
+			$scope.hours= Math.round(minutes/ 60) ;
+			$scope.minutes= minutes %60;
+
+			return $scope.hours + 'h ' + $scope.minutes + 'm'
+
+		};
 
 
-	};
 
 
 
